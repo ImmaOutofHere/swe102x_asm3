@@ -2,13 +2,13 @@ package com.thealgorithms.sorts;
 
 import static com.thealgorithms.sorts.SortUtils.*;
 
-public class CircleSort implements SortAlgorithm {
+public class CircleSort {
 
     /* This method implements the circle sort
      * @param array The array to be sorted
      */
-    @Override
-    public <T extends Comparable<T>> T[] sort(T[] array) {
+
+    public static <T extends Comparable<T>> T[] sort(T[] array) {
         int n = array.length;
         while (doSort(array, 0, n - 1))
             ;
@@ -20,7 +20,7 @@ public class CircleSort implements SortAlgorithm {
      * @param the left boundary of the part currently being sorted
      * @param the right boundary of the part currently being sorted
      */
-    private <T extends Comparable<T>> Boolean doSort(T[] array, int left, int right) {
+    private static <T extends Comparable<T>> Boolean doSort(T[] array, int left, int right) {
         boolean swapped = false;
 
         if (left == right) {

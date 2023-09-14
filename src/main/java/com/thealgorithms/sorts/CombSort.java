@@ -17,10 +17,10 @@ import static com.thealgorithms.sorts.SortUtils.*;
  * @see BubbleSort
  * @see SortAlgorithm
  */
-class CombSort implements SortAlgorithm {
+class CombSort {
 
     // To find gap between elements
-    private int nextGap(int gap) {
+    private static int nextGap(int gap) {
         // Shrink gap by Shrink factor
         gap = (gap * 10) / 13;
         return Math.max(gap, 1);
@@ -32,8 +32,8 @@ class CombSort implements SortAlgorithm {
      * @param arr - an array should be sorted
      * @return sorted array
      */
-    @Override
-    public <T extends Comparable<T>> T[] sort(T[] arr) {
+
+    public static <T extends Comparable<T>> T[] sort(T[] arr) {
         int size = arr.length;
 
         // initialize gap

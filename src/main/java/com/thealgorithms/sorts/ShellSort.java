@@ -2,7 +2,7 @@ package com.thealgorithms.sorts;
 
 import static com.thealgorithms.sorts.SortUtils.*;
 
-public class ShellSort implements SortAlgorithm {
+public class ShellSort  {
 
     /**
      * Implements generic shell sort.
@@ -11,8 +11,8 @@ public class ShellSort implements SortAlgorithm {
      * @param <T> the type of elements in the array.
      * @return the sorted array.
      */
-    @Override
-    public <T extends Comparable<T>> T[] sort(T[] array) {
+    
+    public static <T extends Comparable<T>> T[] sort(T[] array) {
         int length = array.length;
         int gap = 1;
 

@@ -5,7 +5,7 @@ package com.thealgorithms.sorts;
  *
  * @see <a href="https://en.wikipedia.org/wiki/Heapsort">Heap Sort Algorithm</a>
  */
-public class HeapSort implements SortAlgorithm {
+public class HeapSort  {
 
     /**
      * For simplicity, we are considering the heap root index as 1 instead of 0.
@@ -13,8 +13,8 @@ public class HeapSort implements SortAlgorithm {
      * provided indexes by 1 in {@link #swap(Object[], int, int)} and
      * {@link #less(Comparable[], int, int)} functions.
      */
-    @Override
-    public <T extends Comparable<T>> T[] sort(T[] unsorted) {
+
+    public static <T extends Comparable<T>> T[] sort(T[] unsorted) {
         int n = unsorted.length;
         heapify(unsorted, n);
         while (n > 1) {

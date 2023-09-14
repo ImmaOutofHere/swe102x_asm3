@@ -8,10 +8,10 @@ import static com.thealgorithms.sorts.SortUtils.*;
  * @author Podshivalov Nikita (https://github.com/nikitap492)
  * @since 2018-04-10
  */
-public class GnomeSort implements SortAlgorithm {
+public class GnomeSort{
 
-    @Override
-    public <T extends Comparable<T>> T[] sort(T[] arr) {
+
+    public static <T extends Comparable<T>> T[] sort(T[] arr) {
         int i = 1;
         int j = 2;
         while (i < arr.length) {
@@ -23,6 +23,7 @@ public class GnomeSort implements SortAlgorithm {
                     i = j++;
                 }
             }
+            SortUtils.print(arr);
         }
 
         return null;

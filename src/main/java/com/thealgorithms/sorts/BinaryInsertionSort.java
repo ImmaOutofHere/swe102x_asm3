@@ -3,7 +3,7 @@ package com.thealgorithms.sorts;
 public class BinaryInsertionSort {
 
     // Binary Insertion Sort method
-    public int[] binaryInsertSort(int[] array) {
+    public static int[] sort(int[] array) {
         for (int i = 1; i < array.length; i++) {
             int temp = array[i];
             int low = 0;

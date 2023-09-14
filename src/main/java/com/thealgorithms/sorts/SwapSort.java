@@ -9,10 +9,10 @@ import static com.thealgorithms.sorts.SortUtils.*;
  * correct, i.e. final, position. The disadvantage of this algorithm is that
  * each element may only occur once, otherwise there is no termination.
  */
-public class SwapSort implements SortAlgorithm {
+public class SwapSort  {
 
-    @Override
-    public <T extends Comparable<T>> T[] sort(T[] array) {
+    
+    public static <T extends Comparable<T>> T[] sort(T[] array) {
         int LENGTH = array.length;
         int index = 0;
 

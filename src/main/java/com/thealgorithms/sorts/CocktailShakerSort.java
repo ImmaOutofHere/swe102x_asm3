@@ -4,15 +4,15 @@ package com.thealgorithms.sorts;
  * @author Mateus Bizzo (https://github.com/MattBizzo)
  * @author Podshivalov Nikita (https://github.com/nikitap492)
  */
-class CocktailShakerSort implements SortAlgorithm {
+class CocktailShakerSort {
 
     /**
      * This method implements the Generic Cocktail Shaker Sort
      *
      * @param array The array to be sorted Sorts the array in increasing order
      */
-    @Override
-    public <T extends Comparable<T>> T[] sort(T[] array) {
+
+    public static <T extends Comparable<T>> T[] sort(T[] array) {
         int length = array.length;
         int left = 0;
         int right = length - 1;

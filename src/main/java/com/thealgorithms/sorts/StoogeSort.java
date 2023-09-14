@@ -4,10 +4,10 @@ package com.thealgorithms.sorts;
  * @author Amir Hassan (https://github.com/ahsNT)
  * @see SortAlgorithm
  */
-public class StoogeSort implements SortAlgorithm {
+public class StoogeSort  {
 
-    @Override
-    public <T extends Comparable<T>> T[] sort(T[] unsortedArray) {
+    
+    public static <T extends Comparable<T>> T[] sort(T[] unsortedArray) {
         sort(unsortedArray, 0, unsortedArray.length);
         return unsortedArray;
     }

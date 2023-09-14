@@ -17,7 +17,7 @@ public class OddEvenSort {
         }
         System.out.println("--------------");
 
-        oddEvenSort(arr);
+        sort(arr);
 
         // Print Sorted elements
         for (int i = 0; i < arr.length - 1; ++i) {
@@ -31,7 +31,7 @@ public class OddEvenSort {
      *
      * @param arr the array contains elements
      */
-    public static void oddEvenSort(int[] arr) {
+    public static int[] sort(int[] arr) {
         boolean sorted = false;
         while (!sorted) {
             sorted = true;
@@ -50,6 +50,7 @@ public class OddEvenSort {
                 }
             }
         }
+        return arr;
     }
 
     /**

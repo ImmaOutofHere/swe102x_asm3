@@ -1,6 +1,6 @@
 package com.thealgorithms.sorts;
 
-public class SelectionSort implements SortAlgorithm {
+public class SelectionSort  {
 
     /**
      * Generic selection sort algorithm in increasing order.
@@ -9,8 +9,8 @@ public class SelectionSort implements SortAlgorithm {
      * @param <T> the class of array.
      * @return sorted array.
      */
-    @Override
-    public <T extends Comparable<T>> T[] sort(T[] arr) {
+    
+    public static <T extends Comparable<T>> T[] sort(T[] arr) {
         int n = arr.length;
         for (int i = 0; i < n - 1; i++) {
             int minIndex = i;

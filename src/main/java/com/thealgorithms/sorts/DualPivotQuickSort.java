@@ -6,15 +6,15 @@ package com.thealgorithms.sorts;
  * @author Debasish Biswas (https://github.com/debasishbsws) *
  * @see SortAlgorithm
  */
-public class DualPivotQuickSort implements SortAlgorithm {
+public class DualPivotQuickSort  {
 
     /**
      * This method implements the Dual pivot Quick Sort
      *
      * @param array The array to be sorted Sorts the array in increasing order
      */
-    @Override
-    public <T extends Comparable<T>> T[] sort(T[] array) {
+
+    public static <T extends Comparable<T>> T[] sort(T[] array) {
         dualPivotQuicksort(array, 0, array.length - 1);
         return array;
     }

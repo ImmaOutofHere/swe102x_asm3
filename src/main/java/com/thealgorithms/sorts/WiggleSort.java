@@ -15,10 +15,10 @@ import java.util.Arrays;
  * arrays and throw an error, but there are some exceptions that won't be caught, for example [1, 2,
  * 2].
  */
-public class WiggleSort implements SortAlgorithm {
+public class WiggleSort  {
 
-    @Override
-    public <T extends Comparable<T>> T[] sort(T[] unsorted) {
+    
+    public static <T extends Comparable<T>> T[] sort(T[] unsorted) {
         return wiggleSort(unsorted);
     }
 

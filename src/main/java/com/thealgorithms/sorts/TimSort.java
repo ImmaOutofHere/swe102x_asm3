@@ -7,12 +7,12 @@ import static com.thealgorithms.sorts.SortUtils.less;
  * <p>
  * For more details @see <a href="https://en.wikipedia.org/wiki/Timsort">TimSort Algorithm</a>
  */
-class TimSort implements SortAlgorithm {
+class TimSort {
     private static final int SUB_ARRAY_SIZE = 32;
     @SuppressWarnings("rawtypes") private static Comparable[] aux;
 
-    @Override
-    public <T extends Comparable<T>> T[] sort(T[] a) {
+    
+    public static <T extends Comparable<T>> T[] sort(T[] a) {
         int n = a.length;
 
         InsertionSort insertionSort = new InsertionSort();

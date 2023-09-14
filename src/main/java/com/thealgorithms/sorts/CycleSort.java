@@ -6,10 +6,10 @@ import static com.thealgorithms.sorts.SortUtils.print;
 /**
  * @author Podshivalov Nikita (https://github.com/nikitap492)
  */
-class CycleSort implements SortAlgorithm {
+class CycleSort  {
 
-    @Override
-    public <T extends Comparable<T>> T[] sort(T[] arr) {
+
+    public static <T extends Comparable<T>> T[] sort(T[] arr) {
         int n = arr.length;
 
         // traverse array elements
@@ -66,7 +66,7 @@ class CycleSort implements SortAlgorithm {
         return arr;
     }
 
-    private <T extends Comparable<T>> T replace(T[] arr, int pos, T item) {
+    private static <T extends Comparable<T>> T replace(T[] arr, int pos, T item) {
         T temp = item;
         item = arr[pos];
         arr[pos] = temp;

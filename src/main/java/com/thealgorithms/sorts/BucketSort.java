@@ -11,7 +11,7 @@ import java.util.Random;
 public class BucketSort {
 
     public static void main(String[] args) {
-        int[] arr = new int[10];
+        Integer[] arr = new Integer[10];
 
         /* generate 10 random numbers from -50 to 49 */
         Random random = new Random();
@@ -19,7 +19,7 @@ public class BucketSort {
             arr[i] = random.nextInt(100) - 50;
         }
 
-        bucketSort(arr);
+        sort(arr);
 
         /* check array is sorted or not */
         for (int i = 0, limit = arr.length - 1; i < limit; ++i) {
@@ -32,7 +32,7 @@ public class BucketSort {
      *
      * @param arr the array contains elements
      */
-    public static int[] bucketSort(int[] arr) {
+    public static Integer[] sort(Integer[] arr) {
         /* get max value of arr */
         int max = max(arr);
 
@@ -89,7 +89,7 @@ public class BucketSort {
      * @param arr the array contains elements
      * @return max value of given array
      */
-    public static int max(int[] arr) {
+    public static int max(Integer[] arr) {
         int max = arr[0];
         for (int value : arr) {
             if (value > max) {
@@ -105,7 +105,7 @@ public class BucketSort {
      * @param arr the array contains elements
      * @return min value of given array
      */
-    public static int min(int[] arr) {
+    public static int min(Integer[] arr) {
         int min = arr[0];
         for (int value : arr) {
             if (value < min) {

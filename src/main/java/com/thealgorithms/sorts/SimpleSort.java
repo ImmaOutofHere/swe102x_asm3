@@ -2,10 +2,10 @@ package com.thealgorithms.sorts;
 
 import static com.thealgorithms.sorts.SortUtils.*;
 
-public class SimpleSort implements SortAlgorithm {
+public class SimpleSort  {
 
-    @Override
-    public <T extends Comparable<T>> T[] sort(T[] array) {
+    
+    public static <T extends Comparable<T>> T[] sort(T[] array) {
         final int LENGTH = array.length;
 
         for (int i = 0; i < LENGTH; i++) {

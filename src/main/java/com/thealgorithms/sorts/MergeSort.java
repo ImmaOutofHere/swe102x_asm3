@@ -7,7 +7,7 @@ import static com.thealgorithms.sorts.SortUtils.less;
  *
  * @see SortAlgorithm
  */
-class MergeSort implements SortAlgorithm {
+class MergeSort {
 
     @SuppressWarnings("rawtypes") private static Comparable[] aux;
 
@@ -18,8 +18,8 @@ class MergeSort implements SortAlgorithm {
      * @param <T> Comparable class.
      * @return sorted array.
      */
-    @Override
-    public <T extends Comparable<T>> T[] sort(T[] unsorted) {
+
+    public static <T extends Comparable<T>> T[] sort(T[] unsorted) {
         aux = new Comparable[unsorted.length];
         doSort(unsorted, 0, unsorted.length - 1);
         return unsorted;

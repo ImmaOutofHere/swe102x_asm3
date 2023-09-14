@@ -17,14 +17,14 @@ import java.util.List;
  *
  * @author Madhur Panwar (https://github.com/mdrpanwar)
  */
-public class TreeSort implements SortAlgorithm {
+public class TreeSort {
 
-    @Override
-    public <T extends Comparable<T>> T[] sort(T[] unsortedArray) {
+    
+    public static <T extends Comparable<T>> T[] sort(T[] unsortedArray) {
         return doTreeSortArray(unsortedArray);
     }
 
-    @Override
+    
     public <T extends Comparable<T>> List<T> sort(List<T> unsortedList) {
         return doTreeSortList(unsortedList);
     }

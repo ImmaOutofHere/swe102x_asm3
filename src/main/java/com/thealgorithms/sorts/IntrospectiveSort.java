@@ -5,12 +5,12 @@ package com.thealgorithms.sorts;
  *
  * @see <a href="https://en.wikipedia.org/wiki/Introsort">IntroSort Algorithm</a>
  */
-public class IntrospectiveSort implements SortAlgorithm {
+public class IntrospectiveSort  {
 
     private static final int INSERTION_SORT_THRESHOLD = 16;
 
-    @Override
-    public <T extends Comparable<T>> T[] sort(T[] a) {
+
+    public static <T extends Comparable<T>> T[] sort(T[] a) {
         int n = a.length;
         introSort(a, 0, n - 1, 2 * (int) (Math.log(n) / Math.log(2)));
         return a;

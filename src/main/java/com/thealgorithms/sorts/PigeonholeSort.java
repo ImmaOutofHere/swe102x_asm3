@@ -11,7 +11,7 @@ public class PigeonholeSort {
         but we can also implement this for string arrays too.
         See https://www.geeksforgeeks.org/pigeonhole-sort/
     */
-    void sort(Integer[] array) {
+    static Integer[] sort(Integer[] array) {
         int maxElement = array[0];
         for (int element : array) {
             if (element > maxElement) maxElement = element;
@@ -35,6 +35,7 @@ public class PigeonholeSort {
                 k = k + 1;
             }
         }
+        return array;
     }
 
     public static void main(String[] args) {

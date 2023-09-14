@@ -4,7 +4,7 @@ package com.thealgorithms.sorts;
 // BeadSort can't sort negative number, Character, String. It can sort positive number only
 
 public class BeadSort {
-    public int[] sort(int[] unsorted) {
+    public static int[] sort(int[] unsorted) {
         int[] sorted = new int[unsorted.length];
         int max = 0;
         for (int i = 0; i < unsorted.length; i++) {

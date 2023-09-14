@@ -6,9 +6,10 @@ import java.util.Random;
  * @author Podshivalov Nikita (https://github.com/nikitap492)
  * @see SortAlgorithm
  */
-public class BogoSort implements SortAlgorithm {
+public class BogoSort {
 
     private static final Random random = new Random();
+    static int ij = 0;
 
     private static <T extends Comparable<T>> boolean isSorted(T[] array) {
         for (int i = 0; i < array.length - 1; i++) {
@@ -26,10 +27,13 @@ public class BogoSort implements SortAlgorithm {
         for (int i = 0; i < array.length; i++) {
             int randomIndex = i + random.nextInt(length - i);
             SortUtils.swap(array, randomIndex, i);
+            SortUtils.print(array);
+            ij++;
+            System.out.println(ij);
         }
     }
 
-    public <T extends Comparable<T>> T[] sort(T[] array) {
+    public static <T extends Comparable<T>> T[] sort(T[] array) {
         while (!isSorted(array)) {
             nextPermutation(array);
         }

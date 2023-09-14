@@ -8,7 +8,7 @@ import static com.thealgorithms.sorts.SortUtils.*;
  * @author Podshivalov Nikita (https://github.com/nikitap492)
  * @since 2018-04-10
  */
-public class PancakeSort implements SortAlgorithm {
+public class PancakeSort  {
 
     @Override
     public <T extends Comparable<T>> T[] sort(T[] array) {

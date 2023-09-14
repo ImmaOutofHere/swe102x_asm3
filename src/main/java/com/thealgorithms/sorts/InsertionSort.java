@@ -4,7 +4,7 @@ import static com.thealgorithms.sorts.SortUtils.*;
 
 import java.util.function.Function;
 
-class InsertionSort implements SortAlgorithm {
+class InsertionSort  {
 
     /**
      * Generic insertion sort algorithm in increasing order.
@@ -13,12 +13,12 @@ class InsertionSort implements SortAlgorithm {
      * @param <T>   the class of array.
      * @return sorted array.
      */
-    @Override
-    public <T extends Comparable<T>> T[] sort(T[] array) {
+
+    public static <T extends Comparable<T>> T[] sort(T[] array) {
         return sort(array, 0, array.length);
     }
 
-    public <T extends Comparable<T>> T[] sort(T[] array, int lo, int hi) {
+    public static <T extends Comparable<T>> T[] sort(T[] array, int lo, int hi) {
         for (int i = lo; i < hi; i++) {
             for (int j = i; j > lo && less(array[j], array[j - 1]); j--) {
                 swap(array, j, j - 1);
@@ -65,27 +65,27 @@ class InsertionSort implements SortAlgorithm {
     /**
      * Driver Code
      */
-    public static void main(String[] args) {
-        int size = 100_000;
-        Double[] randomArray = SortUtilsRandomGenerator.generateArray(size);
-        Double[] copyRandomArray = new Double[size];
-        System.arraycopy(randomArray, 0, copyRandomArray, 0, size);
-
-        InsertionSort insertionSort = new InsertionSort();
-        double insertionTime = measureApproxExecTime(insertionSort::sort, randomArray);
-        System.out.printf("Original insertion time: %5.2f  sec.\n", insertionTime);
-
-        double insertionSentinelTime = measureApproxExecTime(insertionSort::sentinelSort, copyRandomArray);
-        System.out.printf("Sentinel insertion time: %5.2f  sec.\n", insertionSentinelTime);
-
-        // ~ 1.5 time sentinel sort is faster, then classical Insertion sort implementation.
-        System.out.printf("Sentinel insertion is %f3.2 time faster than Original insertion sort\n", insertionTime / insertionSentinelTime);
-    }
-
-    private static double measureApproxExecTime(Function<Double[], Double[]> sortAlgorithm, Double[] randomArray) {
-        long start = System.currentTimeMillis();
-        sortAlgorithm.apply(randomArray);
-        long end = System.currentTimeMillis();
-        return (end - start) / 1000.0;
-    }
+//    public static void main(String[] args) {
+//        int size = 100_000;
+//        Double[] randomArray = SortUtilsRandomGenerator.generateArray(size);
+//        Double[] copyRandomArray = new Double[size];
+//        System.arraycopy(randomArray, 0, copyRandomArray, 0, size);
+//
+//        InsertionSort insertionSort = new InsertionSort();
+//        double insertionTime = measureApproxExecTime(insertionSort::sort, randomArray);
+//        System.out.printf("Original insertion time: %5.2f  sec.\n", insertionTime);
+//
+//        double insertionSentinelTime = measureApproxExecTime(insertionSort::sentinelSort, copyRandomArray);
+//        System.out.printf("Sentinel insertion time: %5.2f  sec.\n", insertionSentinelTime);
+//
+//        // ~ 1.5 time sentinel sort is faster, then classical Insertion sort implementation.
+//        System.out.printf("Sentinel insertion is %f3.2 time faster than Original insertion sort\n", insertionTime / insertionSentinelTime);
+//    }
+//
+//    private static double measureApproxExecTime(Function<Double[], Double[]> sortAlgorithm, Double[] randomArray) {
+//        long start = System.currentTimeMillis();
+//        sortAlgorithm.apply(randomArray);
+//        long end = System.currentTimeMillis();
+//        return (end - start) / 1000.0;
+//    }
 }

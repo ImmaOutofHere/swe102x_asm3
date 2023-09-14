@@ -12,10 +12,10 @@ import java.util.stream.Stream;
  * @author Youssef Ali (https://github.com/youssefAli11997)
  * @author Podshivalov Nikita (https://github.com/nikitap492)
  */
-class CountingSort implements SortAlgorithm {
+class CountingSort {
 
-    @Override
-    public <T extends Comparable<T>> T[] sort(T[] unsorted) {
+
+    public static <T extends Comparable<T>> T[] sort(T[] unsorted) {
         return sort(Arrays.asList(unsorted)).toArray(unsorted);
     }
 
@@ -27,8 +27,8 @@ class CountingSort implements SortAlgorithm {
      * Sorts the list in increasing order The method uses list elements as keys
      * in the frequency map
      */
-    @Override
-    public <T extends Comparable<T>> List<T> sort(List<T> list) {
+
+    public static <T extends Comparable<T>> List<T> sort(List<T> list) {
         Map<T, Integer> frequency = new TreeMap<>();
         // The final output array
         List<T> sortedArray = new ArrayList<>(list.size());

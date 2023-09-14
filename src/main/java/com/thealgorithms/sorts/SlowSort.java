@@ -4,15 +4,15 @@ package com.thealgorithms.sorts;
  * @author Amir Hassan (https://github.com/ahsNT)
  * @see SortAlgorithm
  */
-public class SlowSort implements SortAlgorithm {
+public class SlowSort  {
 
-    @Override
-    public <T extends Comparable<T>> T[] sort(T[] unsortedArray) {
+    
+    public static <T extends Comparable<T>> T[] sort(T[] unsortedArray) {
         sort(unsortedArray, 0, unsortedArray.length - 1);
         return unsortedArray;
     }
 
-    private <T extends Comparable<T>> void sort(T[] array, int i, int j) {
+    private static <T extends Comparable<T>> void sort(T[] array, int i, int j) {
         if (SortUtils.greaterOrEqual(i, j)) {
             return;
         }
